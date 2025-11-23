@@ -76,3 +76,9 @@ ai-literacy-bibliometric-analysis/
 ├── scopus_query.txt                 # Full search query for reproducibility
 ├── README.md
 └── LICENSE                          # MIT License
+---
+## Data Cleaning and Exclusions
+- One retracted publication (*Fostering AI literacy for future librarians*, **College & Undergraduate Libraries**, 2025)  
+  was identified and **removed from the dataset**.  
+  This step follows standard bibliometric practice to ensure only valid research outputs are analyzed.  
+  The record remains documented for transparency in `scripts/python_ai_lit_pipeline.ipynb`.
