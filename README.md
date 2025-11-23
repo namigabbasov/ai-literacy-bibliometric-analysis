@@ -1,8 +1,7 @@
 # AI Literacy Bibliometric Analysis
 
 ## Overview
-This repository presents a full bibliometric and topic modeling analysis of research on **AI literacy** based on Scopus-indexed publications in last 10 years(2016–2025).  
-The project integrates **quantitative bibliometrics**,**conventional NLP methods**,  **machine learning**, **large language models** and **AI-assisted thematic analysis** to explore how AI literacy has emerged and evolved across education, society, and workforce contexts.
+This repository presents a full bibliometric and topic modeling analysis of research on **AI literacy** based on Scopus-indexed publications in last 10 years(2016–2025). The project integrates **quantitative bibliometrics**,**conventional NLP methods**,  **machine learning**, **large language models** and **AI-assisted thematic analysis** to explore how AI literacy has emerged and evolved across education, society, and workforce contexts.
 
 ---
 
