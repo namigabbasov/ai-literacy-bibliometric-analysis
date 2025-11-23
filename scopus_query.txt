@@ -1,0 +1,17 @@
+
+
+
+# Scopus Advanced Search Query for "AI Literacy" Bibliometric Analysis
+# Last updated: November 2025
+# Results as of November 2025: 2,224 documents (2016–2025)
+# Database: Scopus (Elsevier)
+# Export format: CSV (for bibliometric analysis)
+
+(CONFNAME("AI literacy")
+ OR CONFNAME("artificial intelligence literacy")
+ OR SRCTITLE("AI literacy")
+ OR SRCTITLE("artificial intelligence literacy")
+ OR TITLE-ABS-KEY("AI literacy")
+ OR TITLE-ABS-KEY("A.I. literacy")
+ OR TITLE-ABS-KEY("artificial intelligence literacy"))
+AND PUBYEAR > 2009 AND PUBYEAR < 2026
