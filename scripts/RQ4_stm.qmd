@@ -1,0 +1,142 @@
+---
+title: "RQ4_STM"
+format: html
+editor: visual
+---
+
+## Load Libraries
+```{r}
+#install.packages(c("stm", "tidytext", "quanteda", "quanteda.textplots","quanteda.textstats", "tidyverse", "lubridate"))
+
+library(stm)
+library(tidyverse)
+library(quanteda)
+library(quanteda.textplots)
+library(quanteda.textstats)
+```
+## Load Data
+```{r}
+df<- read_csv("~/Desktop/MS-DataScience/Capstone/data/ai_literacy.csv")
+df <- df[!is.na(df$Title) & !is.na(df$Abstract) & !is.na(df$Year), ]
+nrow(df)
+```
+
+## Build Corpus 
+```{r}
+# Combine Title + Abstract into a single STM text field
+df$stm_text <- paste(
+  ifelse(is.na(df$Title), "", df$Title),
+  ifelse(is.na(df$Abstract), "", df$Abstract),
+  sep = ". "
+)
+
+# Ensure Year is numeric
+df$Year <- as.numeric(df$Year)
+
+corpus <- corpus(df, text_field = "stm_text")
+```
+
+## Preprocssing 
+```{r}
+toks <- tokens(
+  corpus,
+  remove_punct = TRUE,
+  remove_numbers = TRUE,
+  remove_symbols = TRUE
+) %>%
+  tokens_tolower() %>%
+  tokens_remove(stopwords("en")) %>%
+  tokens_remove(c("et", "al", "using", "based"))
+
+```
+
+## Document Feature Matrix
+```{r}
+dfm <- dfm(toks)
+dfm <- dfm_trim(dfm, min_termfreq = 5)  
+sum(ntoken(dfm) == 0)
+```
+## Prepare files for STM
+```{r}
+stm_input <- convert(dfm, to = "stm")
+
+docs  <- stm_input$documents
+vocab <- stm_input$vocab
+meta  <- df  # includes Year
+length(docs)
+length(vocab)
+```
+```{r}
+# Align metadata to dfm document order
+meta_matched <- df[docnames(dfm), ]
+
+# Quick check
+nrow(meta_matched)
+ndoc(dfm)
+
+```
+## STM
+```{r}
+test_model <- stm(
+  documents = docs,
+  vocab = vocab,
+  K = 10,
+  prevalence = ~ Year,
+  data = meta,
+  init.type = "Spectral",
+  max.em.its = 150
+)
+```
+## STM Results
+```{r}
+summary(test_model)
+
+```
+## STM Topics 
+```{r}
+labelTopics(test_model, n = 10)
+```
+```{r}
+plot(test_model)
+```
+```{r}
+prep <- estimateEffect(1:10 ~ Year, test_model, meta = meta, uncertainty = "Global")
+
+plot(prep, "Year", model = test_model, method = "continuous")
+
+```
+
+
+```{r}
+library(stm)
+
+k_values <- c(5, 10, 15, 20, 25, 30)
+
+models <- manyTopics(
+  documents = docs,
+  vocab = vocab,
+  K = k_values,
+  prevalence = ~ Year,
+  data = meta,
+  init.type = "Spectral"
+)
+```
+## Examine Model Diag
+```{r}
+models
+
+```
+## Best STM Model
+```{r}
+models_only <- Filter(function(x) inherits(x, "STM"), models)
+qualities <- lapply(models_only, function(m) topicQuality(m, docs))
+qualities 
+```
+```{r}
+qualities <- lapply(models[names(models_only)], function(m) topicQuality(m, docs))
+qualities 
+```
+
+
+
+
