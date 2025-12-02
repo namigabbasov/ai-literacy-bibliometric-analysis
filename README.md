@@ -1,13 +1,8 @@
----
-title: "AI Literacy Bibliometric Analysis"
-output: github_document
----
-
 # AI Literacy Bibliometric Analysis
 
 ## Overview
 
-This repository provides a full bibliometric and embedding-based topic modeling analysis of scholarly research on **AI literacy** published between **2016 and 2025**. The project integrates **quantitative bibliometrics**, **network analysis**, **embedding-based NLP**, and **AI-assisted thematic interpretation** to map how AI literacy has developed as a field across education, healthcare, information science, and workforce contexts.
+This repository provides a full bibliometric and embedding-based topic modeling analysis of scholarly research on **AI literacy** published between **2010 and 2025**. The project integrates **quantitative bibliometrics**, **network analysis**, **embedding-based NLP**, and **AI-assisted thematic interpretation** to map how AI literacy has developed as a field across education, healthcare, information science, and workforce contexts.
 
 The analysis is implemented across **four Colab notebooks**, each corresponding to one of the study’s research questions (RQ1–RQ4).
 
@@ -34,7 +29,6 @@ The analysis is implemented across **four Colab notebooks**, each corresponding 
 - Apply **BERTopic** to titles and abstracts using sentence-transformer embeddings (UMAP + HDBSCAN).
 - Identify macro-level topical domains and track thematic expansion over time.
 - Cluster author/index keywords to reveal meso-level thematic structures.
-- Integrate **AI-assisted thematic interpretation** using OpenAI models to strengthen conceptual synthesis.
 
 ---
 
@@ -59,14 +53,6 @@ Used extensively for:
 **Key packages:**  
 `bibliometrix`, `tidyverse`, `igraph`, `ggraph`
 
-### OpenAI API (Thematic Interpretation)
-Used for:
-- Interpretive summaries of clusters  
-- Cross-method triangulation  
-- Identifying conceptual tensions and implicit framings in the literature  
-
-GPT outputs are integrated cautiously and documented transparently.
-
 ---
 
 ## Project Structure
@@ -75,7 +61,7 @@ GPT outputs are integrated cautiously and documented transparently.
 ai-literacy-bibliometric-analysis/
 │
 ├── data/
-│   └── ai_literacy.csv                 # Cleaned Scopus export (not public)
+│   └── ai_literacy.csv                 
 │
 ├── scripts/
 │   ├── RQ1_venue_analysis.ipynb                     # Publication & venue analysis
@@ -90,5 +76,5 @@ ai-literacy-bibliometric-analysis/
 │   ├── networks/
 │   └── thematic_summaries/
 │
-├── scopus_query.txt                    # Full Scopus query for reproducibility
+├── scopus_query.txt                    
 └── README.Rmd
