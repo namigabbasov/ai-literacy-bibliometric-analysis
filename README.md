@@ -1,55 +1,72 @@
+---
+title: "AI Literacy Bibliometric Analysis"
+output: github_document
+---
+
 # AI Literacy Bibliometric Analysis
 
 ## Overview
-This repository presents a full bibliometric and topic modeling analysis of research on **AI literacy** based on Scopus-indexed publications in last 10 years(2016–2025). The project integrates **quantitative bibliometrics**,**conventional NLP methods**,  **machine learning**, **large language models** and **AI-assisted thematic analysis** to explore how AI literacy has emerged and evolved across education, society, and workforce contexts.
+
+This repository provides a full bibliometric and embedding-based topic modeling analysis of scholarly research on **AI literacy** published between **2016 and 2025**. The project integrates **quantitative bibliometrics**, **network analysis**, **embedding-based NLP**, and **AI-assisted thematic interpretation** to map how AI literacy has developed as a field across education, healthcare, information science, and workforce contexts.
+
+The analysis is implemented across **four Colab notebooks**, each corresponding to one of the study’s research questions (RQ1–RQ4).
 
 ---
 
-## Objectives
+## Research Objectives
 
-1. **Descriptive Bibliometrics**
-   - Analyze publication trends, document types, top venues, authors, countries, and collaboration networks.
+### 1. Descriptive Bibliometrics (RQ1)
+- Identify publication trends, document types, and high-productivity venues.
+- Analyze citation patterns and venue-level visibility.
+- Examine how AI literacy scholarship has expanded—especially after the rise of generative AI.
 
-2. **Co-Citation Analysis**
-   - Construct and visualize the co-citation network.  
-   - Interpret clusters in relation to **digital/media/data literacy**, **computational thinking**, and disciplinary anchors.
+### 2. Author Productivity & Collaboration Networks (RQ2)
+- Identify the most productive and most cited authors.
+- Construct co-authorship networks and detect collaborative clusters.
+- Examine geographic and institutional leadership in shaping the field.
 
-3. **Topic Modeling**
-   - Apply **Structural Topic Modeling (STM)** to titles, abstracts, and keywords (with year as covariate).  
-   - Apply **BERTopic** for embedding-based clustering to capture semantically nuanced topics.  
-   - Compare STM and BERTopic results for robustness and highlight thematic shifts pre- and post-2022.
+### 3. Country Productivity & International Collaboration (RQ3)
+- Map global contributions to AI literacy research.
+- Visualize cross-national collaboration networks.
+- Assess geographic concentration and regional inequalities in research production.
 
-4. **Keyword and Phrase Trends**
-   - Track frequency trajectories of key terms and emerging topics.  
-   - Highlight generative AI-related keywords: *ChatGPT*, *LLM*, *prompt engineering*, *AI ethics*
-
-5. **Thematic Analysis via OpenAI API**
-   - Conduct a qualitative, interpretive layer using OpenAI models.  
-   - Summarize abstract-level themes, classify AI literacy framings, and identify conceptual tensions across contexts.
+### 4. Thematic Landscape of AI Literacy (RQ4)
+- Apply **BERTopic** to titles and abstracts using sentence-transformer embeddings (UMAP + HDBSCAN).
+- Identify macro-level topical domains and track thematic expansion over time.
+- Cluster author/index keywords to reveal meso-level thematic structures.
+- Integrate **AI-assisted thematic interpretation** using OpenAI models to strengthen conceptual synthesis.
 
 ---
 
 ## Methods and Tools
 
-### Python
-- Data cleaning and descriptive bibliometrics
-- Co-authorship and co-citation networks (NetworkX, Gephi export)
-- Keyword and n-gram analysis
-- BERTopic (sentence-transformers + UMAP + HDBSCAN)
+### Python (Colab)
+Used extensively for:
+- Data cleaning and metadata preprocessing  
+- Descriptive bibliometrics and visualizations  
+- Co-authorship and country collaboration network construction  
+- Keyword extraction and clustering  
+- BERTopic modeling  
 
-Key libraries: `pandas`, `numpy`, `networkx`, `bertopic`, `matplotlib`, `seaborn`, `scikit-learn`
+**Key libraries:**  
+`pandas`, `numpy`, `networkx`, `matplotlib`, `seaborn`,  
+`sentence-transformers`, `umap-learn`, `hdbscan`, `bertopic`
 
-### R
-- Bibliometric analysis with `bibliometrix`
-- STM modeling with `stm` and `udpipe`
-- Trend visualization and topic–time modeling
+### R (optional extensions)
+- Supplementary bibliometric validation  
+- Trend modeling and tidy data workflows  
 
-Key packages: `bibliometrix`, `stm`, `udpipe`, `tidyverse`, `igraph`, `ggraph`
+**Key packages:**  
+`bibliometrix`, `tidyverse`, `igraph`, `ggraph`
 
-### Colab + OpenAI API
-- Abstract-level thematic coding and clustering
-- Assistant-based model queries via OpenAI API
-- Integration of GPT analysis outputs with STM/BERTopic findings
+### OpenAI API (Thematic Interpretation)
+Used for:
+- Interpretive summaries of clusters  
+- Cross-method triangulation  
+- Identifying conceptual tensions and implicit framings in the literature  
+
+GPT outputs are integrated cautiously and documented transparently.
+
 ---
 
 ## Project Structure
@@ -58,28 +75,20 @@ Key packages: `bibliometrix`, `stm`, `udpipe`, `tidyverse`, `igraph`, `ggraph`
 ai-literacy-bibliometric-analysis/
 │
 ├── data/
-│   └── ai_literacy.csv              # Raw Scopus export (not public)
+│   └── ai_literacy.csv                 # Cleaned Scopus export (not public)
 │
 ├── scripts/
-│   ├── python_ai_lit_pipeline.ipynb    # Data cleaning + descriptive analysis
-│   ├── r_ai_lit_pipeline.R             # Bibliometrix + STM pipeline
-│   ├── bertopic_pipeline.ipynb         # BERTopic modeling and comparison
-│   └── openai_thematic_analysis.ipynb  # GPT-assisted thematic coding
+│   ├── RQ1_venue_analysis.ipynb                     # Publication & venue analysis
+│   ├── RQ2_author_productivity_and_networks.ipynb   # Author productivity + co-authorship networks
+│   ├── RQ3_country_productivity_and_collaboration.ipynb # Country contributions + collaboration networks
+│   └── RQ4_thematic_analysis.ipynb                  # BERTopic + keyword clustering + AI-assisted thematics
 │
 ├── outputs/
-│   ├── descriptive_stats/
+│   ├── figures/
+│   ├── tables/
 │   ├── topic_models/
-│   ├── keyword_trends/
 │   ├── networks/
-│   └── openai_analyses/
+│   └── thematic_summaries/
 │
-├── scopus_query.txt                 # Full search query for reproducibility
-├── README.md
-└── LICENSE                          # MIT License
-```
----
-## Data Cleaning and Exclusions
-- One retracted publication (*Fostering AI literacy for future librarians*, **College & Undergraduate Libraries**, 2025)  
-  was identified and **removed from the dataset**.  
-  This step follows standard bibliometric practice to ensure only valid research outputs are analyzed.  
-  The record remains documented for transparency in `scripts/python_ai_lit_pipeline.ipynb`.
+├── scopus_query.txt                    # Full Scopus query for reproducibility
+└── README.Rmd
