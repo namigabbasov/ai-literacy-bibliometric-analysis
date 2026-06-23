@@ -1,0 +1,4 @@
+Topic,Count,share_of_corpus,Name,top_words,Representation
+0,1836,0.8660377358490566,0_ai_literacy_ai literacy_students,ai; literacy; ai literacy; students; education; learning; study; intelligence; artificial; artificial intelligence,"['ai', 'literacy', 'ai literacy', 'students', 'education', 'learning', 'study', 'intelligence', 'artificial', 'artificial intelligence']"
+1,200,0.09433962264150944,1_ai_healthcare_nursing_medical,ai; healthcare; nursing; medical; health; intelligence; artificial; artificial intelligence; literacy; clinical,"['ai', 'healthcare', 'nursing', 'medical', 'health', 'intelligence', 'artificial', 'artificial intelligence', 'literacy', 'clinical']"
+2,84,0.03962264150943396,2_ai_libraries_library_literacy,ai; libraries; library; literacy; librarians; ai literacy; information; academic; academic libraries; study,"['ai', 'libraries', 'library', 'literacy', 'librarians', 'ai literacy', 'information', 'academic', 'academic libraries', 'study']"

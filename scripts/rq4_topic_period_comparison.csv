@@ -1,0 +1,29 @@
+period,topic,manual_topic_label,n,period_total,topic_share,period_order
+"Pre-GenAI period, <=2022",0,"AI literacy competencies, educator readiness, and ethical understanding",25,106,0.2358490566037736,0
+"Pre-GenAI period, <=2022",1,"Self-efficacy, acceptance, anxiety, and AI adoption factors",5,106,0.04716981132075472,0
+"Pre-GenAI period, <=2022",2,"Higher education integration, ethics, and professional practice",3,106,0.02830188679245283,0
+"Pre-GenAI period, <=2022",4,"School curriculum, machine learning, and STEM-oriented AI education",33,106,0.3113207547169811,0
+"Pre-GenAI period, <=2022",5,"ChatGPT, writing, language learning, and prompting",1,106,0.009433962264150943,0
+"Pre-GenAI period, <=2022",6,"Human decision-making, trust, and public-facing AI systems",11,106,0.10377358490566038,0
+"Pre-GenAI period, <=2022",7,"Children, games, creative activities, and experiential AI learning",19,106,0.1792452830188679,0
+"Pre-GenAI period, <=2022",8,Healthcare and medical AI literacy,9,106,0.08490566037735849,0
+"Transition year, 2023",0,"AI literacy competencies, educator readiness, and ethical understanding",32,147,0.21768707482993196,1
+"Transition year, 2023",1,"Self-efficacy, acceptance, anxiety, and AI adoption factors",6,147,0.04081632653061224,1
+"Transition year, 2023",2,"Higher education integration, ethics, and professional practice",13,147,0.08843537414965986,1
+"Transition year, 2023",3,Generative AI literacy and instructional tool integration,11,147,0.07482993197278912,1
+"Transition year, 2023",4,"School curriculum, machine learning, and STEM-oriented AI education",29,147,0.19727891156462585,1
+"Transition year, 2023",5,"ChatGPT, writing, language learning, and prompting",12,147,0.08163265306122448,1
+"Transition year, 2023",6,"Human decision-making, trust, and public-facing AI systems",8,147,0.05442176870748299,1
+"Transition year, 2023",7,"Children, games, creative activities, and experiential AI learning",23,147,0.1564625850340136,1
+"Transition year, 2023",8,Healthcare and medical AI literacy,9,147,0.061224489795918366,1
+"Transition year, 2023",9,"Libraries, librarians, and information services",4,147,0.027210884353741496,1
+"GenAI acceleration period, 2024-2026",0,"AI literacy competencies, educator readiness, and ethical understanding",211,1867,0.11301553294054634,2
+"GenAI acceleration period, 2024-2026",1,"Self-efficacy, acceptance, anxiety, and AI adoption factors",249,1867,0.13336904124263524,2
+"GenAI acceleration period, 2024-2026",2,"Higher education integration, ethics, and professional practice",242,1867,0.12961971076593465,2
+"GenAI acceleration period, 2024-2026",3,Generative AI literacy and instructional tool integration,230,1867,0.12319228709159079,2
+"GenAI acceleration period, 2024-2026",4,"School curriculum, machine learning, and STEM-oriented AI education",173,1867,0.09266202463845742,2
+"GenAI acceleration period, 2024-2026",5,"ChatGPT, writing, language learning, and prompting",207,1867,0.11087305838243171,2
+"GenAI acceleration period, 2024-2026",6,"Human decision-making, trust, and public-facing AI systems",169,1867,0.09051955008034279,2
+"GenAI acceleration period, 2024-2026",7,"Children, games, creative activities, and experiential AI learning",145,1867,0.07766470273165506,2
+"GenAI acceleration period, 2024-2026",8,Healthcare and medical AI literacy,155,1867,0.08302088912694162,2
+"GenAI acceleration period, 2024-2026",9,"Libraries, librarians, and information services",86,1867,0.046063202999464384,2
