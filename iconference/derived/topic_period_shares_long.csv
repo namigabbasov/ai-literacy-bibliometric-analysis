@@ -1,0 +1,29 @@
+period,topic,manual_topic_label,short_topic_label,n,period_total,topic_share,period_order
+Pre-2023,0,"AI literacy competencies, educator readiness, and ethical understanding",Educator readiness / ethics,25,106,0.2358490566037736,0
+Pre-2023,1,"Self-efficacy, acceptance, anxiety, and AI adoption factors",Self-efficacy / adoption,5,106,0.04716981132075472,0
+Pre-2023,2,"Higher education integration, ethics, and professional practice",Higher-ed integration / ethics,3,106,0.02830188679245283,0
+Pre-2023,4,"School curriculum, machine learning, and STEM-oriented AI education",School curriculum / STEM,33,106,0.3113207547169811,0
+Pre-2023,5,"ChatGPT, writing, language learning, and prompting",ChatGPT / writing / prompting,1,106,0.009433962264150943,0
+Pre-2023,6,"Human decision-making, trust, and public-facing AI systems",Human decision-making / trust,11,106,0.10377358490566038,0
+Pre-2023,7,"Children, games, creative activities, and experiential AI learning",Children / creative learning,19,106,0.1792452830188679,0
+Pre-2023,8,Healthcare and medical AI literacy,Healthcare / medical AI literacy,9,106,0.08490566037735849,0
+2023 (transition),0,"AI literacy competencies, educator readiness, and ethical understanding",Educator readiness / ethics,32,147,0.21768707482993196,1
+2023 (transition),1,"Self-efficacy, acceptance, anxiety, and AI adoption factors",Self-efficacy / adoption,6,147,0.04081632653061224,1
+2023 (transition),2,"Higher education integration, ethics, and professional practice",Higher-ed integration / ethics,13,147,0.08843537414965986,1
+2023 (transition),3,Generative AI literacy and instructional tool integration,GenAI instructional integration,11,147,0.07482993197278912,1
+2023 (transition),4,"School curriculum, machine learning, and STEM-oriented AI education",School curriculum / STEM,29,147,0.19727891156462585,1
+2023 (transition),5,"ChatGPT, writing, language learning, and prompting",ChatGPT / writing / prompting,12,147,0.08163265306122448,1
+2023 (transition),6,"Human decision-making, trust, and public-facing AI systems",Human decision-making / trust,8,147,0.05442176870748299,1
+2023 (transition),7,"Children, games, creative activities, and experiential AI learning",Children / creative learning,23,147,0.1564625850340136,1
+2023 (transition),8,Healthcare and medical AI literacy,Healthcare / medical AI literacy,9,147,0.061224489795918366,1
+2023 (transition),9,"Libraries, librarians, and information services",Libraries / information services,4,147,0.027210884353741496,1
+2024-2025,0,"AI literacy competencies, educator readiness, and ethical understanding",Educator readiness / ethics,211,1867,0.11301553294054634,2
+2024-2025,1,"Self-efficacy, acceptance, anxiety, and AI adoption factors",Self-efficacy / adoption,249,1867,0.13336904124263524,2
+2024-2025,2,"Higher education integration, ethics, and professional practice",Higher-ed integration / ethics,242,1867,0.12961971076593465,2
+2024-2025,3,Generative AI literacy and instructional tool integration,GenAI instructional integration,230,1867,0.12319228709159079,2
+2024-2025,4,"School curriculum, machine learning, and STEM-oriented AI education",School curriculum / STEM,173,1867,0.09266202463845742,2
+2024-2025,5,"ChatGPT, writing, language learning, and prompting",ChatGPT / writing / prompting,207,1867,0.11087305838243171,2
+2024-2025,6,"Human decision-making, trust, and public-facing AI systems",Human decision-making / trust,169,1867,0.09051955008034279,2
+2024-2025,7,"Children, games, creative activities, and experiential AI learning",Children / creative learning,145,1867,0.07766470273165506,2
+2024-2025,8,Healthcare and medical AI literacy,Healthcare / medical AI literacy,155,1867,0.08302088912694162,2
+2024-2025,9,"Libraries, librarians, and information services",Libraries / information services,86,1867,0.046063202999464384,2

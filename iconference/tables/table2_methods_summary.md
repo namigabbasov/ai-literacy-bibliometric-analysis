@@ -1,0 +1,14 @@
+# Table 2. Corpus and analytical-design summary
+
+| Item | Value |
+|---|---|
+| Source database | Scopus (Elsevier); query in scopus_query.txt |
+| Search date range | PUBYEAR > 2009 AND PUBYEAR < 2026 (initial Scopus search: ~2,224 records logged November 2025, scopus_query.txt) |
+| Assembled corpus (matches manuscript) | 2,198 documents, 2016-2025 (raw export: 2,227 rows, incl. 4 rows from one known CSV parsing artifact; see notes/corpus_count_reconciliation.md) |
+| Final analytic corpus (this paper) | 2,120 documents, 2016-2025 |
+| Text fields analyzed | Title + Abstract (topic_text: minimally cleaned, boilerplate-stripped concatenation) |
+| Topic-modeling approach (reused, not re-run) | BERTopic representation over KMeans-guided clusters (sentence-transformer embeddings, all-MiniLM-L6-v2; fixed k=10 clusters; domain-adjusted c-TF-IDF vocabulary) |
+| Number of topics | 10 (topics 0-9) |
+| Period definitions | Pre-2023 (Year<=2022, n=106); 2023 transition year (n=147, excluded from main lexical contrast); 2024-2025 (Year in 2024-2025, n=1867) |
+| New lexical-analysis method (this paper) | Weighted log-odds-ratio with informative Dirichlet prior (Monroe, Colaresi & Quinn 2008); unigrams + bigrams; min_df=5; alpha0 capped at smaller period's token count |
+| Lexical contrast corpus | Pre-2023 vs. 2024-2025 only (n=1973); 2023 excluded |
